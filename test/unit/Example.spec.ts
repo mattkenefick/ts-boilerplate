@@ -4,7 +4,7 @@ import { expect } from 'chai';
 
 /**
  * @author Matt Kenefick<matt@polymermallard.com>
- * @package BUCK Utilities
+ * @package Boilerplate Utilities
  */
 describe('Example', () => {
 	it('should do a thing', async () => {

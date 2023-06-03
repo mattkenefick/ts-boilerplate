@@ -1,13 +1,11 @@
 <h1 align="center">
-	<img src="https://github.com/buck-co/style-engine/blob/master/docs/image/buck.png?raw=true" height="40" />
-	<br/>
-	BUCK TS Utility
+	TypeScript Boilerplate
 </h1>
 
 ---
 
 This is a shared library for use on the frontend that communicates with the
-BCK TS Utility.
+TypeScript Boilerplate.
 
 ### Installation
 
