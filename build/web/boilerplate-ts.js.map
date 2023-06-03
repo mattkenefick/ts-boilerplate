@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/Example/MyClass.ts", "../../src/Example/index.ts", "../../src/Exception/NotImplemented.ts", "../../src/Exception/index.ts"],
+  "sourcesContent": ["/**\n * @class MyClass\n * @package Example\n * @project Boilerplate\n */\nexport default class MyClass {\n\t/**\n\t * @return string\n\t */\n\tpublic get foo(): string {\n\t\treturn 'bar';\n\t}\n}\n", "import MyClass from './MyClass.js';\n\nexport default {\n\tMyClass,\n};\n", "/**\n * @class NotImplemented\n * @package Exception\n * @project Boilerplate\n */\nexport default class NotImplemented extends Error {}\n", "import NotImplemented from './NotImplemented.js';\n\nexport default {\n\tNotImplemented,\n};\n"],
+  "mappings": "AAKA,IAAqBA,EAArB,KAA6B,CAI5B,IAAW,KAAc,CACxB,MAAO,KACR,CACD,ECVA,IAAOC,EAAQ,CACd,QAAAC,CACD,ECCA,IAAqBC,EAArB,cAA4C,KAAM,CAAC,ECHnD,IAAOC,EAAQ,CACd,eAAAC,CACD",
+  "names": ["MyClass", "Example_default", "MyClass", "NotImplemented", "Exception_default", "NotImplemented"]
+}

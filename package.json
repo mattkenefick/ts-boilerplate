@@ -1,0 +1,86 @@
+{
+	"browser": {
+		"fs": false,
+		"os": false,
+		"path": false
+	},
+	"dependencies": {},
+	"description": "TypeScript utility",
+	"devDependencies": {
+		"@babel/preset-env": "^7.16.11",
+		"@babel/preset-typescript": "^7.16.7",
+		"@babel/types": "^7.18.8",
+		"@semantic-release/changelog": "^6.0.1",
+		"@semantic-release/commit-analyzer": "^9.0.2",
+		"@semantic-release/git": "^10.0.1",
+		"@semantic-release/github": "^8.0.5",
+		"@semantic-release/release-notes-generator": "^10.0.3",
+		"@types/jest": "^27.4.1",
+		"@types/node": "^18.8.3",
+		"@types/svg-parser": "^2.0.3",
+		"@types/web": "^0.0.72",
+		"@typescript-eslint/eslint-plugin": "^4.18.0",
+		"@typescript-eslint/parser": "^4.18.0",
+		"chai": "^4.3.7",
+		"concurrently": "^7.6.0",
+		"esbuild": "^0.15.9",
+		"eslint": "^6.7.2",
+		"eslint-plugin-prettier": "^3.3.1",
+		"eslint-plugin-vue": "^6.2.2",
+		"http-server": "^14.1.0",
+		"husky": "^7.0.0",
+		"jest": "^27.5.1",
+		"jsdom": "^20.0.0",
+		"mocha": "^10.2.0",
+		"npm-run-all": "^4.1.5",
+		"open-cli": "^6.0.1",
+		"semantic-release": "^19.0.3",
+		"standard-version": "^9.0.0",
+		"ts-jest": "^27.1.3",
+		"ts-loader": "^9.2.6",
+		"ts-node": "^10.4.0",
+		"typedoc": "^0.23.0",
+		"typescript": "^4.5.4",
+		"util": "^0.12.4",
+		"webpack": "^5.66.0",
+		"webpack-cli": "^4.9.1"
+	},
+	"engines": {
+		"node": ">=10"
+	},
+	"exports": {
+		".": {
+			"import": "./build/esm/index.js",
+			"require": "./build/cjs/index.js"
+		}
+	},
+	"files": [
+		"!**/*.spec.*",
+		"!**/*.json",
+		"build/esm",
+		"build/main",
+		"build/module",
+		"CHANGELOG.md",
+		"LICENSE",
+		"README.md"
+	],
+	"keywords": [],
+	"license": "MIT",
+	"main": "./build/cjs/index.js",
+	"module": "./build/esm/index.js",
+	"name": "boilerplate-ts",
+	"scripts": {
+		"build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && yarn build:web && bash ./tool/create-packages.sh",
+		"build:cjs": "tsc -p tsconfig.cjs.json && bash ./tool/create-packages.sh",
+		"build:esm": "tsc -p tsconfig.json --outDir build/main",
+		"build:web": "./node_modules/.bin/esbuild src/index.ts --bundle --minify --sourcemap --target=chrome62 --format=esm --outfile=build/web/boilerplate-ts.js --watch",
+		"post:build": "bash ./tool/create-packages.sh",
+		"prepare": "husky install",
+		"serve": "http-server",
+		"test": "yarn build:cjs; jest --env=node --colors --verbose=true",
+		"version": "standard-version",
+		"watch": "concurrently \"yarn build:esm --watch\" \"yarn build:web --watch\""
+	},
+	"types": "build/esm/index.d.ts",
+	"version": "1.2.0"
+}

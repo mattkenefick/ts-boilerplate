@@ -1,0 +1,43 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "declaration": true,
+        "emitDecoratorMetadata": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "incremental": true,
+        "inlineSourceMap": true,
+        "isolatedModules": false,
+        "lib": ["es2017", "dom"],
+        "listEmittedFiles": false,
+        "listFiles": false,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "noFallthroughCasesInSwitch": false,
+        "noImplicitReturns": false,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "outDir": "build/esm",
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "pretty": true,
+        "removeComments": true,
+        "resolveJsonModule": true,
+        "rootDir": "src",
+        "strict": true,
+        "strictPropertyInitialization": false,
+        "target": "es2017",
+        "traceResolution": false,
+        "typeRoots": ["node_modules/@types", "types"],
+        "types": ["jest", "node"],
+		"useDefineForClassFields": false
+    },
+    "exclude": ["test/**/*.ts", "test"],
+    "include": [
+        "src/**/*.ts",
+    ]
+  }

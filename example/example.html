@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Title -->
+		<title>Example</title>
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1>Example</h1>
+			</header>
+
+			<section>
+				<p>Lorem ipsum dolor sit amet.</p>
+			</section>
+		</main>
+
+		<!-- Application -->
+		<script type="module">
+			import { Example } from '/build/web/boilerplate-ts.js';
+
+			// Should have Example.MyClass
+			console.log(Example);
+
+			// Instantiate
+			const myClass = new Example.MyClass;
+
+			// Log the getter
+			console.log('Value:', myClass.foo);
+		</script>
+	</body>
+</html>

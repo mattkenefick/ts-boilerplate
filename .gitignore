@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+.tsbuildinfo
+tsconfig.tsbuildinfo
+tsconfig.cjs.tsbuildinfo
+build/tsconfig.cjs.tsbuildinfo
+build/tsconfig.tsbuildinfo
+*.webp
+*.png
+*.mp4
